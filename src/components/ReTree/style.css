@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+.--re-tree-wrapper {
+  display: inline-block;
+  width: 220px;
+  position: relative;
+  transition: all 100ms;
+  border-radius: 3px;
+}
+.--re-tree-wrapper .--re-input {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  min-height: 40px;
+  width: 100%;
+  max-width: 220px;
+}
+.--re-tree-wrapper .--re-input.focused {
+  border-color: #017cf9;
+}
+.--re-tree-wrapper .--re-input .hide_input {
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0;
+  font-size: 0;
+  border: none;
+  z-index: 2;
+  opacity: 0;
+  display: flex;
+}
+
+.--re-tree-wrapper .--re-input .value-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 2px 6px;
+  gap: 6px;
+}
+
+.--re-operation-area {
+  display: flex;
+}
+
+.--re-tree-wrapper .--re-panel-wrapper {
+  position: absolute;
+  width: fit-content;
+  transform-origin: top;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  z-index: 2009;
+}
+
+.--re-tree-wrapper .--re-input .value-wrapper .--re-el-icon {
+  transition: all 0.3s;
+  transform: rotate(0);
+  font-size: 16px;
+}
+
+.--re-tree-wrapper .--re-input .value-wrapper .--re-el-icon.isOverturn {
+  transform: rotate(180deg);
+}
+
+.--re-tree-wrapper .--re-input .value-wrapper .tags-content {
+  flex: 1;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.--re-tree-wrapper .--re-input .value-wrapper .tags-content .placeholder {
+  font-size: 14px;
+  color: #c0c4cc;
+}
